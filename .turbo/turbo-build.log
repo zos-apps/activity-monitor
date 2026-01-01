@@ -1,0 +1,17 @@
+
+> @zos-apps/activity-monitor@1.0.0 build /Users/z/work/zeekay/zos-apps/activity-monitor
+> tsup
+
+CLI Building entry: src/index.tsx
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.5.1
+CLI Using tsup config: /Users/z/work/zeekay/zos-apps/activity-monitor/tsup.config.ts
+CLI Target: es2022
+CLI Cleaning output folder
+ESM Build start
+ESM dist/index.js     7.43 KB
+ESM dist/index.js.map 22.79 KB
+ESM ⚡️ Build success in 83ms
+DTS Build start
+DTS ⚡️ Build success in 2095ms
+DTS dist/index.d.ts 163.00 B

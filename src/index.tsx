@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Cpu, MemoryStick, HardDrive, Wifi, Activity, Zap } from 'lucide-react';
-import { cn } from '@z-os/ui';
+
+const cn = (...classes: (string | boolean | undefined)[]) => classes.filter(Boolean).join(' ');
 
 interface ActivityMonitorProps {
   onClose: () => void;}
@@ -13,11 +14,11 @@ interface ProcessInfo {
   threads: number;
 }
 
-const ActivityMonitor: React.FC<ActivityMonitorProps> = ({ onClose }) => {
+const ActivityMonitor: React.FC<ActivityMonitorProps> = ({ onClose: _onClose }) => {
   const [activeTab, setActiveTab] = useState<'cpu' | 'memory' | 'energy' | 'disk' | 'network'>('cpu');
   const [cpuUsage, setCpuUsage] = useState(32);
   const [memoryUsage, setMemoryUsage] = useState(68);
-  const [diskUsage, setDiskUsage] = useState(45);
+  const [diskUsage, _setDiskUsage] = useState(45);
   const [networkIn, setNetworkIn] = useState(1.2);
   const [networkOut, setNetworkOut] = useState(0.4);
   const [cpuHistory, setCpuHistory] = useState<number[]>(Array(60).fill(0).map(() => Math.random() * 50 + 10));
